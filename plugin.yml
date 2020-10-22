@@ -1,0 +1,12 @@
+name: MurderMistery
+version: 1.0.3
+api-version: 1.13
+author: MCTzOCK
+main: net.craftions.murdermistery.Murder
+commands:
+  start:
+    usage: /<command>
+  disable-autostart:
+    usage: /<command>
+  enable-autostart:
+    usage: /<command>
