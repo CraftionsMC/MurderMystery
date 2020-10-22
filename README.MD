@@ -13,5 +13,5 @@ Dieses Projekt unterliegt dem deutschen Urheberrecht (siehe http://mctzock.de/do
 
 
 ``
-Copyright (c) 2020 MCTzOCK, Craftions, LuckyMC (owned by Feja111) & its Contributors
+Copyright (c) 2020 MCTzOCK, Craftions, Feja111 & its Contributors
 ``
