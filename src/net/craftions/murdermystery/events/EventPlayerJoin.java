@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.events;
+package net.craftions.murdermystery.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -8,10 +8,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import net.craftions.murdermistery.Murder;
-import net.craftions.murdermistery.config.Config;
-import net.craftions.murdermistery.util.GameUtil;
-import net.craftions.murdermistery.util.PlayerUtil;
+import net.craftions.murdermystery.Murder;
+import net.craftions.murdermystery.config.Config;
+import net.craftions.murdermystery.util.GameUtil;
+import net.craftions.murdermystery.util.PlayerUtil;
 
 public class EventPlayerJoin implements Listener{
 	
