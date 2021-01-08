@@ -18,7 +18,7 @@ import net.craftions.murdermistery.events.EventPlayerJoin;
 
 public class Murder extends JavaPlugin{
 	
-	public static String prefix = "[§cMurder§eMystery§r] ";
+	public static String prefix = "[Â§cMurderÂ§eMysteryÂ§r] ";
 	public static Murder plugin;
 	public static Boolean isStarted = false;
 	public static Boolean isStarting = false;
