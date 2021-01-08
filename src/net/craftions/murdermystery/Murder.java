@@ -1,20 +1,20 @@
-package net.craftions.murdermistery;
+package net.craftions.murdermystery;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.craftions.murdermistery.commands.CommandDisableAutoStart;
-import net.craftions.murdermistery.commands.CommandEnableAutoStart;
-import net.craftions.murdermistery.commands.CommandStart;
-import net.craftions.murdermistery.events.EventChat;
-import net.craftions.murdermistery.events.EventCommandDispatch;
-import net.craftions.murdermistery.events.EventFoodChange;
-import net.craftions.murdermistery.events.EventInventoryClick;
-import net.craftions.murdermistery.events.EventItemDrop;
-import net.craftions.murdermistery.events.EventPlayerDeath;
-import net.craftions.murdermistery.events.EventPlayerDisconnect;
-import net.craftions.murdermistery.events.EventPlayerHit;
-import net.craftions.murdermistery.events.EventPlayerJoin;
+import net.craftions.murdermystery.commands.CommandDisableAutoStart;
+import net.craftions.murdermystery.commands.CommandEnableAutoStart;
+import net.craftions.murdermystery.commands.CommandStart;
+import net.craftions.murdermystery.events.EventChat;
+import net.craftions.murdermystery.events.EventCommandDispatch;
+import net.craftions.murdermystery.events.EventFoodChange;
+import net.craftions.murdermystery.events.EventInventoryClick;
+import net.craftions.murdermystery.events.EventItemDrop;
+import net.craftions.murdermystery.events.EventPlayerDeath;
+import net.craftions.murdermystery.events.EventPlayerDisconnect;
+import net.craftions.murdermystery.events.EventPlayerHit;
+import net.craftions.murdermystery.events.EventPlayerJoin;
 
 public class Murder extends JavaPlugin{
 	
