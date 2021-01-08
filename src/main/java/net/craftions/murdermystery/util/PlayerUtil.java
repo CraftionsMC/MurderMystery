@@ -75,13 +75,10 @@ public class PlayerUtil {
 			}
 		}
 		System.gc();
-		
-//		Location spawn = Bukkit.getWorld("world").getSpawnLocation();
-		Location spawn = Bukkit.getWorld("world").getWorldBorder().getCenter();
-		spawn.setY(255);
-		spawn.setPitch(990.81f);
-		spawn.setYaw(6.53f);
-		
+
+		Location spawn = new Location(Bukkit.getWorld("world"), -79, 50, -184);
+
+
 		for(Player p : Bukkit.getOnlinePlayers())
 		{
 			p.teleport(spawn);
