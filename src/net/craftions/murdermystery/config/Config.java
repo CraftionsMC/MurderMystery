@@ -1,8 +1,8 @@
-package net.craftions.murdermistery.config;
+package net.craftions.murdermystery.config;
 
 import org.bukkit.ChatColor;
 
-import net.craftions.murdermistery.Murder;
+import net.craftions.murdermystery.Murder;
 
 public class Config {
 	
