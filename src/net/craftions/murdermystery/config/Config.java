@@ -10,7 +10,7 @@ public class Config {
 	public static Integer maxPlayers = 8;
 	public static Integer startDelay = 21;
 	
-	public static String noPerms = Murder.prefix + ChatColor.RED + "Dir fehlen leider die erforlderlichen Rechte für diese Funktion!";
+	public static String noPerms = Murder.prefix + ChatColor.RED + "Dir fehlen leider die erforlderlichen Rechte fÃ¼r diese Funktion!";
 	
 	public static Boolean canAutoStart = true;
 	
