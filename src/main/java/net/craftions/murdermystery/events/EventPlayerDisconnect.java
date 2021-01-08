@@ -9,8 +9,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import com.mojang.datafixers.FunctionType.Instance.Mu;
-
 import net.craftions.murdermystery.Murder;
 import net.craftions.murdermystery.util.GameUtil;
 import net.craftions.murdermystery.util.PlayerUtil;
