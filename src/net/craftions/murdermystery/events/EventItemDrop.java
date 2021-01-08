@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.events;
+package net.craftions.murdermystery.events;
 
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerPickupArrowEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 
-import net.craftions.murdermistery.util.PlayerUtil;
+import net.craftions.murdermystery.util.PlayerUtil;
 
 public class EventItemDrop implements Listener{
 	

@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.events;
+package net.craftions.murdermystery.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,8 +11,8 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
-import net.craftions.murdermistery.Murder;
-import net.craftions.murdermistery.util.PlayerUtil;
+import net.craftions.murdermystery.Murder;
+import net.craftions.murdermystery.util.PlayerUtil;
 
 public class EventPlayerDeath implements Listener{
 	

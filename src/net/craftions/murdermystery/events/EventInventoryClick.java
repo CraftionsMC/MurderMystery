@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.events;
+package net.craftions.murdermystery.events;
 
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;

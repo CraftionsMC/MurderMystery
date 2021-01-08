@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.commands;
+package net.craftions.murdermystery.commands;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
-import net.craftions.murdermistery.config.Config;
-import net.craftions.murdermistery.util.GameUtil;
+import net.craftions.murdermystery.config.Config;
+import net.craftions.murdermystery.util.GameUtil;
 
 public class debug implements CommandExecutor, TabCompleter{
 	

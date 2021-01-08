@@ -1,12 +1,12 @@
-package net.craftions.murdermistery.util;
+package net.craftions.murdermystery.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
-import net.craftions.murdermistery.Murder;
-import net.craftions.murdermistery.config.Config;
+import net.craftions.murdermystery.Murder;
+import net.craftions.murdermystery.config.Config;
 
 public class GameUtil {
 	

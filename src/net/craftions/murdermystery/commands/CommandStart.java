@@ -1,11 +1,11 @@
-package net.craftions.murdermistery.commands;
+package net.craftions.murdermystery.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import net.craftions.murdermistery.config.Config;
-import net.craftions.murdermistery.util.GameUtil;
+import net.craftions.murdermystery.config.Config;
+import net.craftions.murdermystery.util.GameUtil;
 
 public class CommandStart implements CommandExecutor{
 	

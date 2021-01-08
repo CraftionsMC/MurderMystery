@@ -1,10 +1,10 @@
-package net.craftions.murdermistery.events;
+package net.craftions.murdermystery.events;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
-import net.craftions.murdermistery.Murder;
+import net.craftions.murdermystery.Murder;
 
 public class EventPlayerHit implements Listener{
 	

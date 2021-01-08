@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.util;
+package net.craftions.murdermystery.util;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -11,7 +11,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import net.craftions.murdermistery.Murder;
+import net.craftions.murdermystery.Murder;
 
 public class PlayerUtil {
 	
