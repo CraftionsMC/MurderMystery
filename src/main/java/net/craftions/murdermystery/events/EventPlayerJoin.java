@@ -31,8 +31,7 @@ public class EventPlayerJoin implements Listener{
 		{
 			if(Murder.isStarted)
 			{
-				Location l1 = Bukkit.getWorld("world").getWorldBorder().getCenter();
-				l1.setY(255);
+				Location l1 = new Location(Bukkit.getWorld("world"), -79, 50, -184);
 				e.getPlayer().teleport(l1);	
 				e.getPlayer().setGameMode(GameMode.SPECTATOR);
 			}
