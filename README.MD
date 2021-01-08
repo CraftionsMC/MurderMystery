@@ -1,6 +1,6 @@
-# Murder Mistery
+# Murder Mystery
 
-Murder Mistery ist ein von Hypixel.net inspirierter Spielmodus.
+Murder Mystery ist ein von Hypixel.net inspirierter Spielmodus.
 
 ## Rechtliches
 Dieses Projekt unterliegt dem deutschen Urheberrecht (siehe http://mctzock.de/docs/Urheberrecht.pdf)
