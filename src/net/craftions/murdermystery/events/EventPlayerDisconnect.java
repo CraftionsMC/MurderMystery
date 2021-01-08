@@ -1,4 +1,4 @@
-package net.craftions.murdermistery.events;
+package net.craftions.murdermystery.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -11,9 +11,9 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.mojang.datafixers.FunctionType.Instance.Mu;
 
-import net.craftions.murdermistery.Murder;
-import net.craftions.murdermistery.util.GameUtil;
-import net.craftions.murdermistery.util.PlayerUtil;
+import net.craftions.murdermystery.Murder;
+import net.craftions.murdermystery.util.GameUtil;
+import net.craftions.murdermystery.util.PlayerUtil;
 
 public class EventPlayerDisconnect implements Listener{
 
