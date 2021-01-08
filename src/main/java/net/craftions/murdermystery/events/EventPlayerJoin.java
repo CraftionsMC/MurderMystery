@@ -18,15 +18,13 @@ public class EventPlayerJoin implements Listener{
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e)
 	{
+		e.getPlayer().setGameMode(GameMode.ADVENTURE);
 		Location l0 = new Location(Bukkit.getWorld("world"), -119, 64, -182);
 		e.getPlayer().teleport(l0);
 		
 		if(PlayerUtil.playerCount() >= Config.minPlayers && PlayerUtil.playerCount() <= Config.maxPlayers && !Murder.isStarted && Config.canAutoStart)
 		{
-			Location l1 = new Location(Bukkit.getWorld("world"), -79, 50, -184);
-			e.getPlayer().teleport(l1);
 			GameUtil.startGame(false);
-			e.getPlayer().setGameMode(GameMode.ADVENTURE);
 		}else
 		{
 			if(Murder.isStarted)

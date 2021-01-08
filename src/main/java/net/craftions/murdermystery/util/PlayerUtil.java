@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -81,6 +78,7 @@ public class PlayerUtil {
 
 		for(Player p : Bukkit.getOnlinePlayers())
 		{
+			p.setGameMode(GameMode.ADVENTURE);
 			p.teleport(spawn);
 		}
 		
