@@ -35,6 +35,7 @@ public class EventPlayerDeath implements Listener{
 						{
 							p.sendMessage(Murder.prefix + ChatColor.GRAY + "Das Spiel ist vorbei! Die " + ChatColor.GREEN + "Unschuldigen " + ChatColor.GRAY + "haben gewonnen!");
 						}
+						Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
 					}
 				}, 5*20L);
 				
@@ -61,6 +62,7 @@ public class EventPlayerDeath implements Listener{
 							{
 								p.sendMessage(Murder.prefix + ChatColor.GRAY + "Das Spiel ist vorbei! Der " + ChatColor.RED + "Murder " + ChatColor.GRAY + "haben gewonnen!");
 							}
+							Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
 						}
 					}, 5*20L);
 				}
