@@ -72,8 +72,7 @@ public class PlayerUtil {
 			}
 		}
 		System.gc();
-
-		Location spawn = new Location(Bukkit.getWorld("world"), -79, 50, -184);
+		Location spawn = new Location(Bukkit.getWorld("world"), -105, 73, -6);
 
 
 		for(Player p : Bukkit.getOnlinePlayers())
