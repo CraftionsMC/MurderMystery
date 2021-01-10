@@ -29,7 +29,7 @@ public class EventPlayerJoin implements Listener{
 		{
 			if(Murder.isStarted)
 			{
-				Location l1 = new Location(Bukkit.getWorld("world"), -106, 61, 587);
+				Location l1 = new Location(Bukkit.getWorld("world"), -106, 73, -6);
 				e.getPlayer().teleport(l1);	
 				e.getPlayer().setGameMode(GameMode.SPECTATOR);
 			}
