@@ -24,7 +24,9 @@ public class EventPlayerJoin implements Listener{
 		
 		if(PlayerUtil.playerCount() >= Config.minPlayers && PlayerUtil.playerCount() <= Config.maxPlayers && !Murder.isStarted && Config.canAutoStart)
 		{
-			GameUtil.startGame(false);
+			if(!Murder.isStarting){
+				GameUtil.startGame(false);
+			}
 		}else
 		{
 			if(Murder.isStarted)
@@ -34,26 +36,6 @@ public class EventPlayerJoin implements Listener{
 				e.getPlayer().setGameMode(GameMode.SPECTATOR);
 			}
 		}
-//		else
-//		{
-//			e.setJoinMessage(null);
-//
-//
-//			
-//			ByteArrayOutputStream b = new ByteArrayOutputStream();
-//			DataOutputStream out = new DataOutputStream(b);
-//			
-//			try {
-//				out.writeUTF("Connect");
-//				out.writeUTF("lobby");
-//			} catch (IOException e1) {
-//				e1.printStackTrace();
-//			}
-//			
-//			Player p = e.getPlayer();
-//			
-//			p.sendPluginMessage(Murder.plugin, "BungeeCord", b.toByteArray());
-//		}
 	}
 	
 }

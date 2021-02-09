@@ -22,7 +22,6 @@ public class GameUtil {
 			p.getInventory().clear();
 			p.setGameMode(GameMode.ADVENTURE);
 		}
-		Murder.isStarted = true;
 		Murder.isStarting = true;
 		task_id = Bukkit.getScheduler().scheduleSyncRepeatingTask(Murder.plugin, new Runnable() {
 			@Override
