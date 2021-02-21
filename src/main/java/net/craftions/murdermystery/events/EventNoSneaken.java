@@ -7,7 +7,7 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
 public class EventNoSneaken implements Listener {
 
     @EventHandler
-    public void (PlayerToggleSneakEvent e){
+    public void NoSneaking(PlayerToggleSneakEvent e){
         e.setCancelled(true);
 
     }
