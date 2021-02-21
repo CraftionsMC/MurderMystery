@@ -1,12 +1,14 @@
 package net.craftions.murdermystery.events;
 
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 
-public class EventSneak implements Listener {
+public class EventNoSneaken implements Listener {
 
+    @EventHandler
     public void (PlayerToggleSneakEvent e){
-        e.setCancelled(PlayerToggleSneakEvent);
+        e.setCancelled(true);
 
     }
 }

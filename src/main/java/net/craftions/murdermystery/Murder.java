@@ -1,20 +1,12 @@
 package net.craftions.murdermystery;
 
+import net.craftions.murdermystery.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.craftions.murdermystery.commands.CommandDisableAutoStart;
 import net.craftions.murdermystery.commands.CommandEnableAutoStart;
 import net.craftions.murdermystery.commands.CommandStart;
-import net.craftions.murdermystery.events.EventChat;
-import net.craftions.murdermystery.events.EventCommandDispatch;
-import net.craftions.murdermystery.events.EventFoodChange;
-import net.craftions.murdermystery.events.EventInventoryClick;
-import net.craftions.murdermystery.events.EventItemDrop;
-import net.craftions.murdermystery.events.EventPlayerDeath;
-import net.craftions.murdermystery.events.EventPlayerDisconnect;
-import net.craftions.murdermystery.events.EventPlayerHit;
-import net.craftions.murdermystery.events.EventPlayerJoin;
 
 public class Murder extends JavaPlugin{
 	
@@ -40,6 +32,7 @@ public class Murder extends JavaPlugin{
 		Bukkit.getPluginManager().registerEvents(new EventPlayerDisconnect(), this);
 		Bukkit.getPluginManager().registerEvents(new EventInventoryClick(), this);
 		Bukkit.getPluginManager().registerEvents(new EventCommandDispatch(), this);
+		Bukkit.getPluginManager().registerEvents(new EventNoSneaken(), this);
 		System.out.println(prefix + "Das Plugin wurde geladen!");
 		super.onEnable();
 	}
