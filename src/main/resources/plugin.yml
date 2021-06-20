@@ -5,6 +5,8 @@ author: MCTzOCK
 main: net.craftions.murdermystery.Murder
 commands:
   start:
+    aliases:
+      - mmstart
     usage: /<command>
   disable-autostart:
     usage: /<command>

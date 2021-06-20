@@ -1,5 +1,6 @@
 package net.craftions.murdermystery.events;
 
+import net.luckperms.api.LuckPermsProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -18,6 +19,7 @@ public class EventPlayerJoin implements Listener{
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e)
 	{
+		e.setJoinMessage(PlayerUtil.getNameWithPrefix(e.getPlayer()) + " §7joined the game.");
 		e.getPlayer().setGameMode(GameMode.ADVENTURE);
 		Location l0 = new Location(Bukkit.getWorld("world"), -17, 4, 47);
 		e.getPlayer().teleport(l0);

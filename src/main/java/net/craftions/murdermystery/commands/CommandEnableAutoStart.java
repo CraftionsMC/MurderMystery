@@ -15,7 +15,7 @@ public class CommandEnableAutoStart implements CommandExecutor {
 		if(sender.hasPermission("murder.command.disable.auto.start"))
 		{
 			Config.canAutoStart = true;
-			sender.sendMessage(Murder.prefix + ChatColor.GRAY + "AutoStart wurde erfolgreich aktiviert!");
+			sender.sendMessage(Murder.prefix + ChatColor.GRAY + "Autostart was activated!");
 		}else
 		{
 			sender.sendMessage(Config.noPerms);

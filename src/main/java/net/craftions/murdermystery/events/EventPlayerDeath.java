@@ -1,5 +1,6 @@
 package net.craftions.murdermystery.events;
 
+import net.craftions.coinsystem.env.spigot.Coinsystem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -23,9 +24,9 @@ public class EventPlayerDeath implements Listener{
 			e.setKeepInventory(true);
 			if(e.getEntity().equals(PlayerUtil.murder.get(0)))
 			{
-				e.setDeathMessage(Murder.prefix + ChatColor.GRAY + "Der Spieler " + ChatColor.YELLOW + e.getEntity().getName() + ChatColor.GRAY + " ist" + ChatColor.RED + " gestorben!");
+				e.setDeathMessage(Murder.prefix + ChatColor.GRAY + "The player " + ChatColor.YELLOW + PlayerUtil.getNameWithPrefix(e.getEntity()) + ChatColor.GRAY + " was" + ChatColor.RED + " killed!");
 				e.getEntity().setGameMode(GameMode.SPECTATOR);
-				Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "Das Spiel ist vorbei! Die Unschuldigen haben gewonnen!");
+				Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "The game is over! The innocents have won!");
 				
 				Bukkit.getScheduler().scheduleSyncDelayedTask(Murder.plugin, new Runnable() {
 					
@@ -33,7 +34,11 @@ public class EventPlayerDeath implements Listener{
 					public void run() {
 						for(Player p : Bukkit.getOnlinePlayers())
 						{
-							p.sendMessage(Murder.prefix + ChatColor.GRAY + "Das Spiel ist vorbei! Die " + ChatColor.GREEN + "Unschuldigen " + ChatColor.GRAY + "haben gewonnen!");
+							p.sendMessage(Murder.prefix + ChatColor.GRAY + "The game is over! The " + ChatColor.GREEN + "Innocents " + ChatColor.GRAY + "have won!");
+							if(!PlayerUtil.murder.get(0).getName().equals(p.getName())){
+								Coinsystem.coins.addCoins(p.getUniqueId().toString(), 1000);
+								p.sendMessage("§eYou got 1000 coins!");
+							}
 						}
 						Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
 					}
@@ -41,7 +46,7 @@ public class EventPlayerDeath implements Listener{
 				
 			}else
 			{
-				e.setDeathMessage(Murder.prefix + ChatColor.GRAY + "Der Spieler " + ChatColor.YELLOW + e.getEntity().getName() + ChatColor.GRAY + " ist" + ChatColor.RED + " gestorben!");
+				e.setDeathMessage(Murder.prefix + ChatColor.GRAY + "The player " + ChatColor.YELLOW + PlayerUtil.getNameWithPrefix(e.getEntity()) + ChatColor.GRAY + " was" + ChatColor.RED + " killed!");
 				e.getEntity().setGameMode(GameMode.SPECTATOR);
 				Integer t = 0;
 				for(Player p : Bukkit.getOnlinePlayers())
@@ -53,15 +58,17 @@ public class EventPlayerDeath implements Listener{
 				}
 				if(t == 1)
 				{
-					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "Der Murder (" + PlayerUtil.murder.get(0).getName() + ") hat gewonnen!");
+					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "The murder (" + PlayerUtil.getNameWithPrefix(PlayerUtil.murder.get(0)) + ") has won!");
 					Bukkit.getScheduler().scheduleSyncDelayedTask(Murder.plugin, new Runnable() {
 						
 						@Override
 						public void run() {
 							for(Player p : Bukkit.getOnlinePlayers())
 							{
-								p.sendMessage(Murder.prefix + ChatColor.GRAY + "Das Spiel ist vorbei! Der " + ChatColor.RED + "Murder " + ChatColor.GRAY + "haben gewonnen!");
+								p.sendMessage(Murder.prefix + ChatColor.GRAY + "The game is over! The " + ChatColor.RED + "murder " + ChatColor.GRAY + "has won!");
 							}
+							Coinsystem.coins.addCoins(PlayerUtil.murder.get(0).getUniqueId().toString(), 1000);
+							PlayerUtil.murder.get(0).sendMessage("§eYou got 1000 coins!");
 							Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "stop");
 						}
 					}, 5*20L);

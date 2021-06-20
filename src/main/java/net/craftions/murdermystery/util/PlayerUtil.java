@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+import net.luckperms.api.LuckPermsProvider;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -18,7 +19,7 @@ public class PlayerUtil {
 	public static ArrayList<Player> innocent = new ArrayList<Player>();
 	
 	private static Integer id = 0;
-	private static Integer tm = 45;
+	private static Integer tm = 20;
 	
 	public static Integer playerCount()
 	{
@@ -91,26 +92,26 @@ public class PlayerUtil {
 				if(tm == 1)
 				{
 					Murder.isProtected = false;
-					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "Der Murder hat sein Schwert bekommen!");
+					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "The murder got his knife!");
 					murder.get(0).getInventory().addItem(new ItemStack(org.bukkit.Material.IRON_SWORD));
-					murder.get(0).sendMessage(Murder.prefix + ChatColor.GRAY + "Du bist " + ChatColor.RED + "MURDER!");
+					murder.get(0).sendMessage(Murder.prefix + ChatColor.GRAY + "You are " + ChatColor.RED + "murder!");
 					detective.get(0).getInventory().addItem(new ItemStack(Material.BOW));
 					detective.get(0).getInventory().addItem(new ItemStack(Material.ARROW, 10));
-					detective.get(0).sendMessage(Murder.prefix + ChatColor.GRAY + "Du bist " + ChatColor.AQUA + "DETECTIVE!");
-					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "Der Spieler " + ChatColor.YELLOW + detective.get(0).getName() + ChatColor.GRAY + " ist Detective!");
+					detective.get(0).sendMessage(Murder.prefix + ChatColor.GRAY + "You are " + ChatColor.AQUA + "detective!");
+					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "The player " + ChatColor.YELLOW + PlayerUtil.getNameWithPrefix(detective.get(0)) + ChatColor.GRAY + " is detective!");
 					for(Player p : Bukkit.getOnlinePlayers())
 					{
 						if(!(detective.get(0).equals(p) || murder.get(0).equals(p)))
 						{
-							p.sendTitle(ChatColor.GREEN + "START!", ChatColor.AQUA + "Du bist ein Unschuldiger!");
+							p.sendTitle(ChatColor.GREEN + "START!", ChatColor.AQUA + "You are an innocent!");
 						}else
 						{
 							if(detective.get(0).equals(p))
 							{
-								p.sendTitle(ChatColor.GREEN + "START!", ChatColor.AQUA + "Du bist ein Detective!");
+								p.sendTitle(ChatColor.GREEN + "START!", ChatColor.AQUA + "You are a detective!");
 							}else
 							{
-								p.sendTitle(ChatColor.GREEN + "START!", ChatColor.AQUA + "Du bist ein Murder!");
+								p.sendTitle(ChatColor.GREEN + "START!", ChatColor.AQUA + "You are a murder!");
 							}
 						}
 					}
@@ -118,9 +119,13 @@ public class PlayerUtil {
 				}
 				if(tm.toString().endsWith("0") || tm.toString().endsWith("5") || tm < 10)
 				{	
-					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "Die Schutzzeit endet in " + ChatColor.YELLOW + tm + "s");
+					Bukkit.broadcastMessage(Murder.prefix + ChatColor.GRAY + "The protection time ends in " + ChatColor.YELLOW + tm + " seconds");
 				}
 			}
 		}, 0L, 1*20L);
+	}
+
+	public static String getNameWithPrefix(Player p){
+		return LuckPermsProvider.get().getGroupManager().getGroup(LuckPermsProvider.get().getUserManager().getUser(p.getUniqueId()).getPrimaryGroup()).getCachedData().getMetaData().getPrefix() + p.getName();
 	}
 }
